@@ -27,7 +27,7 @@
 
 .res-card {
   width: 200px;
-  height: 350px;
+  height: auto;
   padding: 5px;
   background-color: rgba(128, 128, 128, 0.425);
   margin: 5px;
@@ -44,4 +44,9 @@
 
 .res-logo {
   width: 100%;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
 }

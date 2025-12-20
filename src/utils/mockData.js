@@ -1,39 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src="https://img.icons8.com/color/96/food.png"></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
-
-const RestaurantCard = (props) => {
-  const { resData } = props;
-
-  return (
-    <div className="res-card">
-      <img className="res-logo" alt="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/6/6/f6c81999-57b6-4eb7-ac66-dc1c3485f2e4_6ba607a5-1751-462a-a73d-68ae91ade469.jpg"></img>
-      <h3>{resData.info.name}</h3>
-      <h4>{resData.info.cuisines.join(",")}</h4>
-      <h4>{resData.info.avgRatingString} stars</h4>
-      
-      <h4>{resData.info.availability.nextCloseTime} minutes</h4>
-    </div>
-  )
-}
-
 const resList = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
@@ -51,9 +15,9 @@ const resList = [
         "Beverages",
         "Rolls & Wraps"
       ],
-      "avgRating": 4.3,
+      "avgRating": 3.3,
       "parentId": "8503",
-      "avgRatingString": "4.3",
+      "avgRatingString": "3.3",
       "totalRatingsString": "704",
       "promoted": true,
       "adTrackingId": "cid=67680090-9277-4b0d-82a9-9e1e920c113a~p=0~adgrpid=67680090-9277-4b0d-82a9-9e1e920c113a#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=908349~plpr=COLLECTION~eid=1ed4d222-c12c-41c1-8408-20964d36831d~srvts=1765388954988~collid=83631",
@@ -203,9 +167,9 @@ const resList = [
         "Tacos",
         "Fast Food"
       ],
-      "avgRating": 4.2,
+      "avgRating": 3.2,
       "parentId": "8505",
-      "avgRatingString": "4.2",
+      "avgRatingString": "3.2",
       "totalRatingsString": "850",
       "promoted": true,
       "sla": {
@@ -353,9 +317,9 @@ const resList = [
         "American",
         "Fast Food"
       ],
-      "avgRating": 4.4,
+      "avgRating": 3.4,
       "parentId": "8507",
-      "avgRatingString": "4.4",
+      "avgRatingString": "3.4",
       "totalRatingsString": "1100",
       "promoted": true,
       "sla": {
@@ -503,9 +467,9 @@ const resList = [
         "Noodles",
         "Asian"
       ],
-      "avgRating": 4.1,
+      "avgRating": 3.1,
       "parentId": "8509",
-      "avgRatingString": "4.1",
+      "avgRatingString": "3.1",
       "totalRatingsString": "650",
       "promoted": true,
       "sla": {
@@ -791,34 +755,4 @@ const resList = [
   }
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">
-        Search
-      </div>
-      <div className="res-container">
-        {resList.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  )
-}
-
-
-const Applayout = () => {
-  return (
-    <div className="app">
-      <Header></Header>
-      <Body></Body>
-    </div>
-  )
-}
-
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<Applayout></Applayout>);
-
+export default resList;
