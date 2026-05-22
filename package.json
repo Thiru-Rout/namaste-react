@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Thiru-Rout/namaste-react#readme",
   "devDependencies": {
-    "parcel": "^2.16.1"
+    "parcel": "^2.16.4"
   },
   "dependencies": {
     "react": "^19.2.0",
